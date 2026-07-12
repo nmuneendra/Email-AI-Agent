@@ -1,11 +1,7 @@
 name: Run Email AI Agent
 
 on:
-  schedule:
-    # Triggers every 2 hours. We use 17 past the hour (e.g., 2:23, 4:23) 
-    # to bypass high load delays that usually happen exactly at :00
-    - cron: '0 */2 * * *'
-  workflow_dispatch: # This allows you to press a button to manually run it anytime
+  workflow_dispatch: # This allows cron-job.org to trigger this via the API instantly
 
 jobs:
   run-agent-script:
