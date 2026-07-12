@@ -1,7 +1,11 @@
 name: Run Email AI Agent
 
 on:
-  workflow_dispatch: # This allows cron-job.org to trigger this via the API instantly
+  # 1. 💡 Allows cron-job.org to trigger this via the API instantly
+  workflow_dispatch: 
+
+  # 2. (Optional) Keeps the manual button active inside your browser dashboard
+  manual_trigger:
 
 jobs:
   run-agent-script:
