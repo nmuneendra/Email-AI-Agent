@@ -103,7 +103,7 @@ def run_agent():
         print("Sending to WhatsApp via Twilio...")
         twilio_client = Client(TWILIO_SID, TWILIO_TOKEN)
         
-        final_payload = f"📬 *Your 4-Hour Email Digest* 📬\n\n{summary_text}"
+        final_payload = f"📬 *Your 2-Hour Email Digest* 📬\n\n{summary_text}"
         
         message = twilio_client.messages.create(
             body=final_payload,
